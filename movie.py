@@ -3,7 +3,7 @@ from flask import Flask, render_template
 
 app=Flask(__name__)
 
-db_name='movie.db'
+db_name='data/movie.db'
 
 @app.route('/')
 def index():
