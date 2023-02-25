@@ -9,3 +9,5 @@ print("table dropped successfully");
 
 conn.execute('CREATE TABLE movies ()')
 print("table created successfully")
+
+# movie dataset from https://www.kaggle.com/datasets/danielgrijalvas/movies?resource=download
