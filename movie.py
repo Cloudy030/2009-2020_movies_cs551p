@@ -10,11 +10,22 @@ def index():
   conn = sqlite3.connect(db_name)
   conn.row_factory = sqlite3.Row
   cur = conn.cursor()
-  cur.execute('select * from movies')
+  cur.execute('select name, rating, genre, year, score from movies')
   rows = cur.fetchall()
   print(rows)
   conn.close()
   return render_template('index.html', rows = rows)
+
+@app.route('/movie_detail/<name>')
+def movie_detail(name):
+  conn = sqlite3.connect(db_name)
+  conn.row_factory = sqlite3.Row
+  cur = conn.cursor()
+  cur.execute('select * from movies WHERE name=?', [name])
+  rows = cur.fetchall()
+  print(rows)
+  conn.close()
+  return render_template('movie_detail.html', rows = rows)
 
 @app.route('/rating')
 def rating():

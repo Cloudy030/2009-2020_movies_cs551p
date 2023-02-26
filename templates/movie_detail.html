@@ -3,21 +3,30 @@
     <title>Movie 🎥</title>
   </head>
   <body>
-    <h1>Movie</h1>
+    <h1>Movie Details</h1>
     <p>🍿🎥🎞️📽️🎬🎦</p>
       <p><a href={{url_for('index')}}>Movies </a> | <a href={{url_for('rating')}}>Rating System</a> | <a href={{url_for('genre')}}>Movie genre</a></p>
-    {% for row in rows %}
+    <!-- {% for row in rows %} -->
     <p>
-      <a href={{ url_for('movie_detail', name=row['name'])}}>{{row[0]}}</a> |
-      <!-- {{row['id']}} id| -->
-       <!-- {{row['name']}} | -->
+      <!-- {{row[0]['id']}} | -->
+      {{row['name']}} |
       {{row['rating']}} |
       {{row['genre']}} |
       {{row['year']}} |
-      {{row['score']}}
+      {{row['release_date_place']}} |
+      {{row['score']}} |
+      {{row['votes']}} |
+      {{row['director']}} |
+      {{row['star']}} |
+      {{row['writer']}} |
+      {{row['country']}} |
+      {{row['budget']}} |
+      {{row['gross']}} |
+      {{row['company']}} |
+      {{row['runtime']}}
 <!-- name, rating, genre, year, release_date_place, score, votes, director, writer, star, country, budget, gross, company, runtime -->
     </p>
-    {% endfor %}
+    <!-- {% endfor %} -->
   </body>
 </html></body>
 </html>
