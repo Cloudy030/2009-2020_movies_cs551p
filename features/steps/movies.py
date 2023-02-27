@@ -15,6 +15,7 @@ def click(context):
     context.browser.find_element(By.PARTIAL_LINK_TEXT, "Inglourious Basterds").click()
     # element = driver.find_element(By.PARTIAL_LINK_TEXT, "element_partial_link_text")
     # https://stackoverflow.com/questions/69875125/find-element-by-commands-are-deprecated-in-selenium
+    # explain this part in the reflective journey as challenge
 
 @then(u'I should see details of that movie')
 def details(context):

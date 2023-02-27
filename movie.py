@@ -38,6 +38,18 @@ def rating():
   conn.close()
   return render_template('rating.html', rows = rows)
 
+@app.route('/rating_movie/<rating>')
+def rating_movie(rating):
+  conn = sqlite3.connect(db_name)
+  conn.row_factory = sqlite3.Row
+  cur = conn.cursor()
+  # cur.execute('select rating from rating WHERE rating=?', [rating])
+  cur.execute('select * from movies WHERE rating=?', [rating])
+  rows = cur.fetchall()
+  print(rows)
+  conn.close()
+  return render_template('rating_movie.html', rows = rows)
+
 @app.route('/genre')
 def genre():
   conn = sqlite3.connect(db_name)

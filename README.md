@@ -1,4 +1,6 @@
 # cs551p_assessment
+
+rewrite
 A programming assignment for course CS551P to build a database driven web application with flask
 document the design, development, implementation, installation and use of the application
 why and how app developed
