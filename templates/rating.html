@@ -1,9 +1,61 @@
-<html>
-  <head>
-    <title>Rating System📽️</title>
-  </head>
-  <body>
-    <h1>Movie and Television </h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Rating System 📽️</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!--all pages link to same stylesheet to keep look and feel-->
+</head>
+
+<body>
+  <header>
+    <!-- heading with navigation bar -->
+    <div class="sticky-top">
+      <!--header need to be responsive to the window changing-->
+      <h1>Movie Rating</h1>
+      <ul class="nav nav-tabs">
+        <!--bootstrap navigation tab with custom background color-->
+        <li class="nav-item">
+          <a class="nav-link" href={{url_for('index')}}> Movies </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href={{url_for('rating')}}>Rating System</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href={{url_for('genre')}}>Movie genre</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <p>🍿🎥🎞️📽️🎬🎦</p>
+  <div class="content">
+    <table class="data_table">
+      <tr>
+        <th>Rating</th>
+        <th>System</th>
+        <th>Definition</th>
+        <th>Explaination</th>
+      </tr> 
+      {% for row in rows %} 
+      <tr>
+        <td>{{row['rating']}}</td>
+        <td>{{row['system']}}</td>
+        <td>{{row['definition']}}</td>
+        <td>{{row['explaination']}}</td>
+        <!-- rating,system,definiton,explaination -->
+      </tr> 
+      {% endfor %}
+    </table>
+  </div>
+  <!-- <h1>Movie and Television </h1>
     <p>🍿🎥🎞️📽️🎬🎦</p>
     <p><a href={{url_for('index')}}>Movies </a> |<a href={{url_for('rating')}}> Rating System</a> | <a href={{url_for('genre')}}> Movie genre</a></p>
 
@@ -13,10 +65,10 @@
       {{row['system']}} |
       {{row['definition']}} |
       {{row['explaination']}}
-      <!-- rating,system,definiton,explaination -->
+      -- rating,system,definiton,explaination --
 
     </p>
-    {% endfor %}
-  </body>
-</html></body>
+    {% endfor %} -->
+</body>
+
 </html>

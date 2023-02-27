@@ -1,23 +1,74 @@
-<html>
-  <head>
-    <title>Movie 🎥</title>
-  </head>
-  <body>
-    <h1>Movie</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Movie 🎥</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!--all pages link to same stylesheet to keep look and feel-->
+</head>
+
+<body>
+  <header>
+    <!-- heading with navigation bar -->
+    <div class="sticky-top">
+      <!--header need to be responsive to the window changing-->
+      <h1>Movies from 2009-2020</h1>
+      <ul class="nav nav-tabs">
+        <!--bootstrap navigation tab with custom background color-->
+        <li class="nav-item">
+          <a class="nav-link active" href={{url_for('index')}}> Movies </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href={{url_for('rating')}}>Rating System</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href={{url_for('genre')}}>Movie genre</a>
+        </li>
+      </ul>
+    </div>
+  </header>
     <p>🍿🎥🎞️📽️🎬🎦</p>
-      <p><a href={{url_for('index')}}>Movies </a> | <a href={{url_for('rating')}}>Rating System</a> | <a href={{url_for('genre')}}>Movie genre</a></p>
-    {% for row in rows %}
-    <p>
-      <a href={{ url_for('movie_detail', name=row['name'])}}>{{row[0]}}</a> |
-      <!-- {{row['id']}} id| -->
-       <!-- {{row['name']}} | -->
-      {{row['rating']}} |
-      {{row['genre']}} |
-      {{row['year']}} |
-      {{row['score']}}
-<!-- name, rating, genre, year, release_date_place, score, votes, director, writer, star, country, budget, gross, company, runtime -->
-    </p>
-    {% endfor %}
-  </body>
-</html></body>
+  <div class="content">
+    <table class="data_table" style="width:100%">
+      <tr>
+        <th>Movie Title</th>
+        <th>Rating</th>
+        <th>Genre</th>
+        <th>Year</th>
+        <th style="width:auto">iMDb Score</th>
+      </tr> 
+      {% for row in rows %} 
+      <tr>
+        <!-- https://stackoverflow.com/questions/11267154/fit-cell-width-to-content -->
+        <td><a href={{ url_for('movie_detail', name=row['name'])}}>{{row[0]}}</a></td>
+        <td style="width:auto">{{row['rating']}}</td>
+        <td>{{row['genre']}}</td>
+        <td>{{row['year']}}</td>
+        <td>{{row['score']}}</td>
+        <!-- rating,system,definiton,explaination -->
+      </tr> 
+      {% endfor %}
+    </table>
+  </div>
+  <!-- <h1>Movie</h1>
+  <p>🍿🎥🎞️📽️🎬🎦</p>
+  <p><a href={{url_for('index')}}>Movies </a> | <a href={{url_for('rating')}}>Rating System</a> | <a href={{url_for('genre')}}>Movie genre</a></p>
+  {% for row in rows %}
+  <p>
+    <a href={{ url_for('movie_detail', name=row['name'])}}>{{row[0]}}</a> |
+    -- {{row['id']}} id| --
+    -- {{row['name']}} | ->    {{row['rating']}} | {{row['genre']}} | {{row['year']}} | {{row['score']}}
+    -- name, rating, genre, year, release_date_place, score, votes, director, writer, star, country, budget, gross, company, runtime --
+  </p>
+  {% endfor %}  -->
+</body>
+
 </html>

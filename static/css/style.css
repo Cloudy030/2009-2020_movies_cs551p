@@ -1,0 +1,36 @@
+body {
+  background-color: rgb(255, 240, 212);
+  /*same background color for all pages*/
+  width: 100%;
+}
+
+.sticky-top {
+  background-color: rgb(255, 222, 161);
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.sticky-top h1 {
+  color: brown;
+  text-align: center;
+}
+
+.content {
+  padding-left: 6%;
+  padding-right: 6%;
+  padding-bottom: 2%;
+  }
+
+table, th, td {
+  /* width: 100%; */
+  border: 3px solid rgb(255, 222, 161);
+  border-collapse: collapse;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+th {
+  text-align: center;
+  background-color: rgb(255, 222, 161);
+}
