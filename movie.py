@@ -43,10 +43,16 @@ def rating_movie(rating):
   conn = sqlite3.connect(db_name)
   conn.row_factory = sqlite3.Row
   cur = conn.cursor()
-  # cur.execute('select rating from rating WHERE rating=?', [rating])
-  cur.execute('select * from movies WHERE rating=?', [rating])
+  # cur.execute('select rating.rating, movies.name from rating, movies where rating.rating=movies.rating and rating.rating=?', [rating])
+  cur.execute('select rating.rating, rating.system, rating.definition, rating.explaination, movies.name, movies.genre, movies.year, movies.score from rating, movies where rating.rating=movies.rating and rating.rating=?', [rating])
   rows = cur.fetchall()
   print(rows)
+  # cur.execute('select * from movies WHERE rating=?', [rating])
+  # rows = cur.fetchall()
+  # print(rows)
+  # cur.execute('select * from rating WHERE rating=?', [rating])
+  # des = cur.fetchall()
+  # print(des)
   conn.close()
   return render_template('rating_movie.html', rows = rows)
 

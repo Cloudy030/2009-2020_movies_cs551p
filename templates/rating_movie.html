@@ -34,77 +34,29 @@
     </div>
   </header>
     <p>🍿🎥🎞️📽️🎬🎦</p>
-  <!-- <div class="content">
-    <table class="data_table" style="width:100%">
-      {% for row in rows %}
-      <tr>
-        <th>Movie Title</th>
-        <td>{{row['name']}}</td>
-      </tr>
-      <tr>
-        <th>Rating of the movie</th>
-        <td>{{row['rating']}}</td>
-      </tr>
-      <tr>
-        <th>Main Genre</th>
-        <td>{{row['genre']}}</td>
-      </tr>
-      <tr>
-        <th>Released Year</th>
-        <td>{{row['year']}}</td>
-      </tr>
-      <tr>
-        <th>Released date and Country</th>
-        <td>{{row['release_date_place']}}</td>
-      </tr>
-      <tr>
-        <th>iMDb Score</th>
-        <td>{{row['score']}}</td>
-      </tr>
-      <tr>
-        <th>Number of iMDb user votes</th>
-        <td>{{row['votes']}}</td>
-      </tr>
-      <tr>
-        <th>Director</th>
-        <td>{{row['director']}}</td>
-      </tr>
-      <tr>
-        <th>Writer</th>
-        <td>{{row['writer']}}</td>
-      </tr>
-      <tr>
-        <th>Main actor/actress</th>
-        <td>{{row['star']}}</td>
-      </tr>
-      <tr>
-        <th>Country of origin</th>
-        <td>{{row['country']}}</td>
-      </tr>
-      <tr>
-        <th>Budget of themovie</th>
-        <td>{{row['budget']}}</td>
-      </tr>
-      <tr>
-        <th>Revenue of the movie</th>
-        <td>{{row['gross']}}</td>
-      </tr>
-      <tr>
-        <th>Production Company</th>
-        <td>{{row['company']}}</td>
-      </tr>
-      <tr>
-        <th>Duration of the movie</th>
-        <td>{{row['runtime']}}</td>
-      </tr>
-  -- name, rating, genre, year, release_date_place, score, votes, director, writer, star, country, budget, gross, company, runtime --
-    {% endfor %}
-    </table>
-  </div> -->
+
   <div class="content">
+      <table class="data_table">
+      <tr>
+        <th>Rating</th>
+        <th>System</th>
+        <th>Definition</th>
+        <th>Explaination</th>
+      </tr> 
+      <!-- {% for row in rows %}  -->
+      <tr>
+        <td>{{row['rating']}}</td>
+        <td>{{row['system']}}</td>
+        <td>{{row['definition']}}</td>
+        <td>{{row['explaination']}}</td>
+        <!-- rating,system,definiton,explaination -->
+      </tr> 
+      <!-- {% endfor %} -->
+    </table>
+    <br>
     <table class="data_table" style="width:100%">
       <tr>
-        <th>Movie Title</th>
+        <th>Movie Title with this Rating</th>
         <!-- <th>Rating</th> -->
         <th>Genre</th>
         <th>Year</th>
@@ -113,7 +65,7 @@
       {% for row in rows %} 
       <tr>
         <!-- https://stackoverflow.com/questions/11267154/fit-cell-width-to-content -->
-        <td><a href={{ url_for('movie_detail', name=row['name'])}}>{{row[1]}}</a></td>
+        <td><a href={{ url_for('movie_detail', name=row['name'])}}>{{row['name']}}</a></td>
         <!-- <td style="width:auto">{{row['rating']}}</td> -->
         <td>{{row['genre']}}</td>
         <td>{{row['year']}}</td>
