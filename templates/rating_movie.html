@@ -8,6 +8,8 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <!--all pages link to same stylesheet to keep look and feel-->
@@ -36,24 +38,28 @@
     <p>🍿🎥🎞️📽️🎬🎦</p>
 
   <div class="content">
-      <table class="data_table">
+    <h2>{{rows[0]['rating']}}</h2>
+    <p>Sytem: {{rows[0]['system']}}<br>
+    Defintition: {{rows[0]['definition']}}<br>
+    Explaination: {{rows[0]['explaination']}}</p>
+      <!-- <table class="data_table">
       <tr>
         <th>Rating</th>
         <th>System</th>
         <th>Definition</th>
         <th>Explaination</th>
       </tr> 
-      <!-- {% for row in rows %}  -->
+      -- {% for row in rows %}  --
       <tr>
         <td>{{row['rating']}}</td>
         <td>{{row['system']}}</td>
         <td>{{row['definition']}}</td>
         <td>{{row['explaination']}}</td>
-        <!-- rating,system,definiton,explaination -->
+        -- rating,system,definiton,explaination --
       </tr> 
-      <!-- {% endfor %} -->
-    </table>
-    <br>
+      -- {% endfor %} --
+    </table> -->
+    <!-- <br> -->
     <table class="data_table" style="width:100%">
       <tr>
         <th>Movie Title with this Rating</th>

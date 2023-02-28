@@ -45,6 +45,7 @@ def rating_movie(rating):
   cur = conn.cursor()
   # cur.execute('select rating.rating, movies.name from rating, movies where rating.rating=movies.rating and rating.rating=?', [rating])
   cur.execute('select rating.rating, rating.system, rating.definition, rating.explaination, movies.name, movies.genre, movies.year, movies.score from rating, movies where rating.rating=movies.rating and rating.rating=?', [rating])
+  # select columns from 2 differetn tables movies and ratings 
   rows = cur.fetchall()
   print(rows)
   # cur.execute('select * from movies WHERE rating=?', [rating])

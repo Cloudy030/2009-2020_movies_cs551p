@@ -2,6 +2,7 @@ body {
   background-color: rgb(255, 240, 212);
   /*same background color for all pages*/
   width: 100%;
+  font-family: 'Shantell Sans', cursive;
 }
 
 .sticky-top {
@@ -14,6 +15,7 @@ body {
 .sticky-top h1 {
   color: brown;
   text-align: center;
+  font-weight: bold;
 }
 
 .content {
@@ -21,6 +23,11 @@ body {
   padding-right: 6%;
   padding-bottom: 2%;
   }
+
+.content h2 {
+  color: brown;
+  font-style: italic;
+}
 
 table, th, td {
   /* width: 100%; */

@@ -8,6 +8,10 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <!--all pages link to same stylesheet to keep look and feel-->
@@ -33,7 +37,7 @@
       </ul>
     </div>
   </header>
-    <p>🍿🎥🎞️📽️🎬🎦</p>
+  <p>🍿🎥🎞️📽️🎬🎦</p>
   <div class="content">
     <table class="data_table" style="width:100%">
       <tr>
@@ -42,9 +46,7 @@
         <th>Genre</th>
         <th>Year</th>
         <th style="width:auto">iMDb Score</th>
-      </tr> 
-      {% for row in rows %} 
-      <tr>
+      </tr> {% for row in rows %} <tr>
         <!-- https://stackoverflow.com/questions/11267154/fit-cell-width-to-content -->
         <td><a href={{ url_for('movie_detail', name=row['name'])}}>{{row[0]}}</a></td>
         <td style="width:auto"><a href={{ url_for('rating_movie', rating=row['rating'])}}>{{row[1]}}</a></td>
@@ -52,8 +54,7 @@
         <td>{{row['year']}}</td>
         <td>{{row['score']}}</td>
         <!-- rating,system,definiton,explaination -->
-      </tr> 
-      {% endfor %}
+      </tr> {% endfor %}
     </table>
   </div>
   <!-- <h1>Movie</h1>
