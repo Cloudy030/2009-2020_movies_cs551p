@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <!-- goole text -->
   <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <!--all pages link to same stylesheet to keep look and feel-->
@@ -46,7 +47,9 @@
       </tr> 
       {% for row in rows %} 
       <tr>
-        <td>{{row['rating']}}</td>
+        <!-- <td>{{row['rating']}}</td> -->
+        <td style="width:auto"><a href={{ url_for('rating_movie', rating=row['rating'])}}>{{row['rating']}}</a></td>
+          <!-- to rating_movie page to show all movies with same rating -->
         <td>{{row['system']}}</td>
         <td>{{row['definition']}}</td>
         <td>{{row['explaination']}}</td>

@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <!-- goole text -->
   <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <!--all pages link to same stylesheet to keep look and feel-->
@@ -42,6 +43,7 @@
     <p>Sytem: {{rows[0]['system']}}<br>
     Defintition: {{rows[0]['definition']}}<br>
     Explaination: {{rows[0]['explaination']}}</p>
+    <!-- only print the data related to rating once -->
       <!-- <table class="data_table">
       <tr>
         <th>Rating</th>
@@ -73,7 +75,7 @@
         <!-- https://stackoverflow.com/questions/11267154/fit-cell-width-to-content -->
         <td><a href={{ url_for('movie_detail', name=row['name'])}}>{{row['name']}}</a></td>
         <!-- <td style="width:auto">{{row['rating']}}</td> -->
-        <td>{{row['genre']}}</td>
+        <td><a href={{ url_for('genre_movie', genre=row['genre'])}}>{{row['genre']}}</a></td>
         <td>{{row['year']}}</td>
         <td>{{row['score']}}</td>
         <!-- rating,system,definiton,explaination -->

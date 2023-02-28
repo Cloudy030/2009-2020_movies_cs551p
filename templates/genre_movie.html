@@ -4,12 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Movie 🎥</title>
+  <title>Genre & Movies 🎞️</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@400;700&display=swap" rel="stylesheet">
   <!-- goole text -->
@@ -23,42 +21,66 @@
     <!-- heading with navigation bar -->
     <div class="sticky-top">
       <!--header need to be responsive to the window changing-->
-      <h1>Movies from 2009-2020</h1>
+      <h1>Movie Genre</h1>
       <ul class="nav nav-tabs">
         <!--bootstrap navigation tab with custom background color-->
         <li class="nav-item">
-          <a class="nav-link active" href={{url_for('index')}}>Movies🍿</a>
+          <a class="nav-link" href={{url_for('index')}}>Movies</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href={{url_for('rating')}}>Rating System</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href={{url_for('genre')}}>Movie genre</a>
+          <a class="nav-link active" href={{url_for('genre')}}>Movie genre🍿</a>
         </li>
       </ul>
     </div>
   </header>
-  <p>🍿🎥🎞️📽️🎬🎦</p>
+    <p>🍿🎥🎞️📽️🎬🎦</p>
+
   <div class="content">
-    <table class="data_table" style="width:100%">
-      <!-- movie table with some columns of data showing -->
+    <h2>{{rows[0]['genre']}}</h2>
+    <p>Description: {{rows[0]['description']}}</p>
+        <!-- only print the data related to genre once -->
+      <!-- <table class="data_table">
       <tr>
-        <th>Movie Title</th>
         <th>Rating</th>
-        <th>Genre</th>
+        <th>System</th>
+        <th>Definition</th>
+        <th>Explaination</th>
+      </tr> 
+      -- {% for row in rows %}  --
+      <tr>
+        <td>{{row['rating']}}</td>
+        <td>{{row['system']}}</td>
+        <td>{{row['definition']}}</td>
+        <td>{{row['explaination']}}</td>
+        -- rating,system,definiton,explaination --
+      </tr> 
+      -- {% endfor %} --
+    </table> -->
+    <!-- <br> -->
+    <table class="data_table" style="width:100%">
+      <tr>
+        <th>Movie Title in this genre</th>
+        <!-- <th>Rating</th> -->
+        <th>Rating</th>
         <th>Year</th>
         <th style="width:auto">iMDb Score</th>
-      </tr> {% for row in rows %} <tr>
+      </tr> 
+      {% for row in rows %} 
+      <tr>
         <!-- https://stackoverflow.com/questions/11267154/fit-cell-width-to-content -->
-        <td><a href={{ url_for('movie_detail', name=row['name'])}}>{{row[0]}}</a></td>
+        <td><a href={{ url_for('movie_detail', name=row['name'])}}>{{row['name']}}</a></td>
           <!-- to movie detail page -->
-        <td style="width:auto"><a href={{ url_for('rating_movie', rating=row['rating'])}}>{{row[1]}}</a></td>
+        <!-- <td style="width:auto">{{row['rating']}}</td> -->
+        <td style="width:auto"><a href={{ url_for('rating_movie', rating=row['rating'])}}>{{row['rating']}}</a></td>
           <!-- to rating_movie page to show all movies with same rating -->
-        <td><a href={{ url_for('genre_movie', genre=row['genre'])}}>{{row[2]}}</a></td>
         <td>{{row['year']}}</td>
         <td>{{row['score']}}</td>
         <!-- rating,system,definiton,explaination -->
-      </tr> {% endfor %}
+      </tr> 
+      {% endfor %}
     </table>
   </div>
   <!-- <h1>Movie</h1>

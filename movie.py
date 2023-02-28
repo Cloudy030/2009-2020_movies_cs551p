@@ -67,3 +67,22 @@ def genre():
   print(rows)
   conn.close()
   return render_template('genre.html', rows = rows)
+
+@app.route('/genre_movie/<genre>')
+def genre_movie(genre):
+  conn = sqlite3.connect(db_name)
+  conn.row_factory = sqlite3.Row
+  cur = conn.cursor()
+  # cur.execute('select rating.rating, movies.name from rating, movies where rating.rating=movies.rating and rating.rating=?', [rating])
+  cur.execute('select genre.genre, genre.description, movies.name, movies.rating, movies.year, movies.score from genre, movies where genre.genre=movies.genre and genre.genre=?', [genre])
+  # select columns from 2 differetn tables movies and ratings 
+  rows = cur.fetchall()
+  print(rows)
+  # cur.execute('select * from movies WHERE rating=?', [rating])
+  # rows = cur.fetchall()
+  # print(rows)
+  # cur.execute('select * from rating WHERE rating=?', [rating])
+  # des = cur.fetchall()
+  # print(des)
+  conn.close()
+  return render_template('genre_movie.html', rows = rows)
