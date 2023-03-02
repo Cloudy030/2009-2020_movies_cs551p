@@ -88,7 +88,7 @@ No license used
 Documentation is placed in the code's comments.
 
 ## Background
-This is an assignment of course Advanced Programming (CS551P) for Master of Information Technology (MScIT) from University of Aberdeen (UoA).
+This is an assessment of course Advanced Programming (CS551P) for Master of Information Technology (MScIT) from University of Aberdeen (UoA).
 It is required to develop a database-driven web application using Flask and deploy the developed website with Render.
 
 This is a production of Ho Pok Nga in March 2023.
