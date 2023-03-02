@@ -1,6 +1,8 @@
 import csv
 import sqlite3
 
+'''
+references
 # movie dataset from https://www.kaggle.com/datasets/danielgrijalvas/movies?resource=download
 # with row number limitation, movies from 2009-2020 are extracted to be used
 # rating movie data from https://www.filmratings.com/
@@ -8,6 +10,7 @@ import sqlite3
 # genre data from https://www.masterclass.com/articles/how-to-identify-film-genres
 # genre data from https://www.studiobinder.com/blog/movie-genres-list/
 # genre data from https://www.nfi.edu/movie-genres/
+'''
 
 conn=sqlite3.connect('data/movie.db')
 cur=conn.cursor()
