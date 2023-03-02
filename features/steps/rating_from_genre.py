@@ -1,0 +1,25 @@
+from behave import given, when, then
+
+@given(u'I navigate to genre movie page')
+def nav(context):
+    """ 
+    Navigate to the genre movie page
+    """
+    context.browser.get('http://localhost:5000/genre_movie/Action')
+
+@when(u'I click on the rating in genre movie list')
+def click(context):
+    """ 
+    Find the desired link
+    """
+    context.browser.find_element_by_partial_link_text('TV-14').click()
+
+@then(u'I should see the rating details and movies with that rating')
+def details(context):
+    """ 
+    if successful, then we should be directed to the rating movie page
+    """
+    # use print(context.browser.page_source) to aid debugging
+    print(context.browser.page_source)
+    assert context.browser.current_url == 'http://localhost:5000/rating_movie/TV-14'
+    assert 'Furie | ->    TV-14 | Action | 2019 | 6.3    ' in context.browser.page_source

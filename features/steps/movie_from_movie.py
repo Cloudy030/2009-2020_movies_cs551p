@@ -12,7 +12,7 @@ def click(context):
     """ 
     Find the desired link
     """
-    context.browser.find_element_by_partial_link_text('2').click()
+    context.browser.find_element_by_partial_link_text('Beauty and the Beast').click()
 
 @then(u'I should see the details of that movie')
 def details(context):
@@ -21,5 +21,5 @@ def details(context):
     """
     # use print(context.browser.page_source) to aid debugging
     print(context.browser.page_source)
-    assert context.browser.current_url == 'http://localhost:5000/movie_detail/Inglourious Basterds'
-    # assert '01595 Amanda Loaf' in context.browser.page_source
+    assert context.browser.current_url == 'http://localhost:5000/movie_detail/Beauty%20and%20the%20Beast'
+    assert 'Beauty and the Beast |      PG |      Family |      2017 |      March 17, 2017 (United States) |      7.1 |      283000.0 |      Bill Condon |      Emma Watson |      Stephen Chbosky |      United States |      160000000.0 |      1264434525.0 |      Mandeville Films |      129.0' in context.browser.page_source
