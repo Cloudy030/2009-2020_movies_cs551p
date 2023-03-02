@@ -5,7 +5,7 @@ def nav(context):
     """ 
     Navigate to the genre movie page
     """
-    context.browser.get('http://localhost:5000/genre_movie/Family')
+    context.browser.get('https://sierraviolin-learncombine-5000.codio-box.uk/genre_movie/Family')
 
 @when(u'I click on the movie name in genre list')
 def click(context):
@@ -21,5 +21,5 @@ def details(context):
     """
     # use print(context.browser.page_source) to aid debugging
     print(context.browser.page_source)
-    assert context.browser.current_url == 'http://localhost:5000/movie_detail/Beauty%20and%20the%20Beast'
+    assert context.browser.current_url == 'https://sierraviolin-learncombine-5000.codio-box.uk/movie_detail/Beauty%20and%20the%20Beast'
     assert 'Beauty and the Beast |      PG |      Family |      2017 |      March 17, 2017 (United States) |      7.1 |      283000.0 |      Bill Condon |      Emma Watson |      Stephen Chbosky |      United States |      160000000.0 |      1264434525.0 |      Mandeville Films |      129.0' in context.browser.page_source

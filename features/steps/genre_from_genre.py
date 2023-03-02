@@ -5,7 +5,7 @@ def nav(context):
     """ 
     Navigate to the genre page
     """
-    context.browser.get('http://localhost:5000/genre')
+    context.browser.get('https://sierraviolin-learncombine-5000.codio-box.uk/genre')
 
 @when(u'I click on the genre in genre list')
 def click(context):
@@ -21,5 +21,5 @@ def details(context):
     """
     # use print(context.browser.page_source) to aid debugging
     print(context.browser.page_source)
-    assert context.browser.current_url == 'http://localhost:5000/genre_movie/Family'
+    assert context.browser.current_url == 'https://sierraviolin-learncombine-5000.codio-box.uk/genre_movie/Family'
     assert 'Beauty and the Beast | ->    PG | Family | 2017 | 7.1 Round of Your Life | ->     | Family | 2019 | 4.6' in context.browser.page_source
