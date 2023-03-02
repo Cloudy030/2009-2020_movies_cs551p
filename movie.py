@@ -44,7 +44,7 @@ def rating_movie(rating):
   conn.row_factory = sqlite3.Row
   cur = conn.cursor()
   # cur.execute('select rating.rating, movies.name from rating, movies where rating.rating=movies.rating and rating.rating=?', [rating])
-  cur.execute('select rating.rating, rating.system, rating.definition, rating.explaination, movies.name, movies.genre, movies.year, movies.score from rating, movies where rating.rating=movies.rating and rating.rating=?', [rating])
+  cur.execute('select rating.rating, rating.system, rating.definition, rating.explanation, movies.name, movies.genre, movies.year, movies.score from rating, movies where rating.rating=movies.rating and rating.rating=?', [rating])
   # select columns from 2 differetn tables movies and ratings 
   rows = cur.fetchall()
   print(rows)

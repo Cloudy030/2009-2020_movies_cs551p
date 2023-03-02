@@ -20,7 +20,7 @@ conn.execute('DROP TABLE IF EXISTS genre')
 print("table dropped successfully");
 
 # create tables
-conn.execute('CREATE TABLE rating (rating TEXT, system TEXT, definition TEXT, explaination TEXT)')
+conn.execute('CREATE TABLE rating (rating TEXT, system TEXT, definition TEXT, explanation TEXT)')
 conn.execute('CREATE TABLE genre (genre TEXT, description TEXT)')
 conn.execute('CREATE TABLE movies (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, rating TEXT, genre TEXT, year INTEGER, release_date_place TEXT, score TEXT, votes TEXT, director TEXT, writer TEXT, star TEXT, country TEXT, budget TEXT, gross TEXT, company TEXT, runtime TEXT, FOREIGN KEY (rating) REFERENCES rating(rating), FOREIGN KEY (genre) REFERENCES genre(genre))')
 
@@ -37,9 +37,9 @@ try:
       rating=row[0]
       system=row[1]
       definition=row[2]
-      explaination=row[3]
+      explanation=row[3]
 
-      cur.execute('INSERT INTO rating VALUES (?,?,?,?)',(rating, system, definition, explaination))
+      cur.execute('INSERT INTO rating VALUES (?,?,?,?)',(rating, system, definition, explanation))
       conn.commit()
   print("rating data parsed successfully");
 except ValueError:
