@@ -23,7 +23,7 @@ A horizontal navigation bar is showing in every web page allow users to navigate
 Links are embedded into the data shown in the table columns movie title, rating and genre.
 
 ## Where to view
-Web application link: https://cs551p-movie.onrender.com/
+Web application hosted on Render: https://cs551p-movie.onrender.com/
 
 ## Dependencies
 ~~~
