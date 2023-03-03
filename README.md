@@ -83,6 +83,7 @@ python3 -m flask run -h 0.0.0.0
 
 ## License
 MIT License
+
 Copyright (c) 2023 Cloudy030
 
 ## Documentation
