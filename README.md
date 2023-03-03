@@ -82,7 +82,8 @@ export FLASK_ENV=development
 python3 -m flask run -h 0.0.0.0
 
 ## License
-No license used
+MIT License
+Copyright (c) 2023 Cloudy030
 
 ## Documentation
 Documentation is placed in the code's comments.
