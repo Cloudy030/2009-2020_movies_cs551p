@@ -26,6 +26,7 @@ Links are embedded into the data shown in the table columns movie title, rating 
 Web application hosted on Render: https://cs551p-movie.onrender.com/
 
 ## Dependencies
+Dependencies can be viewed in requirements.txt
 ~~~
 behave==1.2.6
 click==8.0.4
@@ -51,6 +52,7 @@ zipp==3.6.0
 ## Running in virtual environment
 ~~~
 pyenv install 3.7.9
+pyenv local 3.7.9
 python3 -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
