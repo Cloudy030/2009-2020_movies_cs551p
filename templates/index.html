@@ -37,8 +37,14 @@
       </ul>
     </div>
   </header>
-  <p>🍿🎥🎞️📽️🎬🎦</p>
+  <br>
   <div class="content">
+    <p style="text-align: center;">🍿🎥🎞️📽️🎬🎦</p>
+    <p>This Movie website showed the movies published from 2009 to 2020.<br><br>
+    By clicking the movie name in the tables, details of the movie will be shown. <br>
+    By clicking the rating in the tables, details of the rating with the movies with that rating will be shown. <br>
+    By clicking the genre in the tables, details of the genre with the movies in that genre will be shown.<br><br>
+    Details of all related ratings and genres are shown when navigated through the above tabs.</p>
     <table class="data_table" style="width:100%">
       <!-- movie table with some columns of data showing -->
       <tr>
@@ -47,7 +53,9 @@
         <th>Genre</th>
         <th>Year</th>
         <th style="width:auto">iMDb Score</th>
-      </tr> {% for row in rows %} <tr>
+      </tr>
+      {% for row in rows %}
+      <tr>
         <!-- https://stackoverflow.com/questions/11267154/fit-cell-width-to-content -->
         <td><a href={{ url_for('movie_detail', name=row['name'])}}>{{row[0]}}</a></td>
           <!-- to movie detail page -->
@@ -56,8 +64,9 @@
         <td><a href={{ url_for('genre_movie', genre=row['genre'])}}>{{row[2]}}</a></td>
         <td>{{row['year']}}</td>
         <td>{{row['score']}}</td>
-        <!-- rating,system,definiton,explaination -->
-      </tr> {% endfor %}
+        <!-- rating,system,definiton,explanation -->
+      </tr> 
+      {% endfor %}
     </table>
   </div>
   <!-- <h1>Movie</h1>
