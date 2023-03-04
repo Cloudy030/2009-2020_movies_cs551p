@@ -1,0 +1,33 @@
+* b791f76 : submission report
+* 51f806e : update read me pyenv local 3.7.9
+* ad92724 : mention render in readme
+* 5f51725 : update readme coding part
+* 7a8d173 : update readme
+* 6845938 : Update README.md
+* 10dde71 : create license
+* 3b3b47d : change feature website
+* 2b9ed2d : 9 features
+* 2041a67 : feature_separate branch added
+* 396b0ba : update readme
+* bac0a5b : update readme
+* 51335ab : read me feature explanation update
+* 5fb0ac2 : add movie_genre feature
+* e1c4d82 : google font trail for deployemnt
+* 480bc7a : rating detail onle show once and google font
+* ecaa595 : rating show movies with repeating rating table
+* 3759fcf : rating_movie show details of same rating movies
+* 4333360 : new requirement.txt
+* e527737 : change requirement.txt to dataclasses==0.6 from 0.8
+* 5613a87 : with requirements.txt
+* 6d41f29 : movies.feature
+* 1b0bf83 : add movie_detail.html
+* 7e289e1 : render test
+* 2eb7721 : try except in parse_csv.py
+* ca06514 : database available to show in website
+* 9bb9508 : movie.db first generate complete
+* e61b4dc : movie data 2009-2020
+* a9d77ca : remove movie_edited.csv with nearly 7000 rows of data
+* 369bf9d : edit movie.csv to 2843 rows of data 10 years of movie 1986-1995
+* c946876 : edit movie.csv to less than 7000 rows of data
+* fca5d25 : add movie csv
+* 5297964 : Initial commit

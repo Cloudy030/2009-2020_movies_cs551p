@@ -62,6 +62,11 @@ export FLASK_ENV=development
 python3 -m flask run -h 0.0.0.0
 ~~~
 
+## Maintenance
+Latest code should be pull from GitHub to for deployment in Render.
+At most two websites can be opened at once from the Render deployed link.
+The number of rows of data in movies_edit.csv can be increased when the rating.csv and genre.csv are updated respectively.
+
 ## License
 MIT License
 
