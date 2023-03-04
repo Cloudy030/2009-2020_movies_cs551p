@@ -40,25 +40,7 @@
     <p style="text-align: center;">🍿🎥🎞️📽️🎬🎦</p>
     <h2>{{rows[0]['genre']}}</h2>
     <p>Description: {{rows[0]['description']}}</p>
-        <!-- only print the data related to genre once -->
-      <!-- <table class="data_table">
-      <tr>
-        <th>Rating</th>
-        <th>System</th>
-        <th>Definition</th>
-        <th>Explaination</th>
-      </tr> 
-      -- {% for row in rows %}  --
-      <tr>
-        <td>{{row['rating']}}</td>
-        <td>{{row['system']}}</td>
-        <td>{{row['definition']}}</td>
-        <td>{{row['explaination']}}</td>
-        -- rating,system,definiton,explaination --
-      </tr> 
-      -- {% endfor %} --
-    </table> -->
-    <!-- <br> -->
+   
     <table class="data_table" style="width:100%">
       <tr>
         <th>Movie Title in this genre</th>
@@ -77,22 +59,12 @@
           <!-- to rating_movie page to show all movies with same rating -->
         <td>{{row['year']}}</td>
         <td>{{row['score']}}</td>
-        <!-- rating,system,definiton,explaination -->
+
       </tr> 
       {% endfor %}
     </table>
   </div>
-  <!-- <h1>Movie</h1>
-  <p>🍿🎥🎞️📽️🎬🎦</p>
-  <p><a href={{url_for('index')}}>Movies </a> | <a href={{url_for('rating')}}>Rating System</a> | <a href={{url_for('genre')}}>Movie genre</a></p>
-  {% for row in rows %}
-  <p>
-    <a href={{ url_for('movie_detail', name=row['name'])}}>{{row[0]}}</a> |
-    -- {{row['id']}} id| --
-    -- {{row['name']}} | ->    {{row['rating']}} | {{row['genre']}} | {{row['year']}} | {{row['score']}}
-    -- name, rating, genre, year, release_date_place, score, votes, director, writer, star, country, budget, gross, company, runtime --
-  </p>
-  {% endfor %}  -->
+
 </body>
 
 </html>

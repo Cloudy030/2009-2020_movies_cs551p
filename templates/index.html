@@ -62,24 +62,13 @@
         <td style="width:auto"><a href={{ url_for('rating_movie', rating=row['rating'])}}>{{row[1]}}</a></td>
           <!-- to rating_movie page to show all movies with same rating -->
         <td><a href={{ url_for('genre_movie', genre=row['genre'])}}>{{row[2]}}</a></td>
+          <!-- to genre_movie page to show all movies in same genre -->
         <td>{{row['year']}}</td>
         <td>{{row['score']}}</td>
-        <!-- rating,system,definiton,explanation -->
       </tr> 
       {% endfor %}
     </table>
   </div>
-  <!-- <h1>Movie</h1>
-  <p>🍿🎥🎞️📽️🎬🎦</p>
-  <p><a href={{url_for('index')}}>Movies </a> | <a href={{url_for('rating')}}>Rating System</a> | <a href={{url_for('genre')}}>Movie genre</a></p>
-  {% for row in rows %}
-  <p>
-    <a href={{ url_for('movie_detail', name=row['name'])}}>{{row[0]}}</a> |
-    -- {{row['id']}} id| --
-    -- {{row['name']}} | ->    {{row['rating']}} | {{row['genre']}} | {{row['year']}} | {{row['score']}}
-    -- name, rating, genre, year, release_date_place, score, votes, director, writer, star, country, budget, gross, company, runtime --
-  </p>
-  {% endfor %}  -->
 </body>
 
 </html>

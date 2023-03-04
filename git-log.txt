@@ -1,3 +1,5 @@
+* 5e00c05 : readme update
+* 5c0c8db : git log
 * 82cd979 : update readme testing documents
 * 4a7b482 : update readme maintenance
 * b791f76 : submission report
