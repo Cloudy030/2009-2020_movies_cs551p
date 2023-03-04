@@ -1,9 +1,9 @@
 # Movies from 2009-2020
 
-Movies is a Flask web application the provide details of movies from 2009-2020. Data displayed in the web application is obtained from DANIEL GRIJALVA's movie industry database on Kaggle (https://www.kaggle.com/datasets/danielgrijalvas/movies?resource=download).
+Movies is a Flask database-driven web application the provide details of movies from 2009-2020. Data displayed in the web application is obtained from DANIEL GRIJALVA's movie industry database on Kaggle (https://www.kaggle.com/datasets/danielgrijalvas/movies?resource=download).
 
 ## Main features
-There are six templates in the web application where three of them are main pages and three remaining are detail pages.
+There are six templates in this web application where three of them are main pages and three remaining are detail pages.
 - Main pages
   - Movie page
     - showing all movies from 2009-2020 saved in the database
@@ -19,14 +19,14 @@ There are six templates in the web application where three of them are main page
   - Genre movie page
     - By clicking a particular genre on movie page, genre page and rating movie page, description of the genre will be shown along with all movies inside that genre
 
-A horizontal navigation bar is showing in every web page allow users to navigate to the respective main pages.
+A horizontal navigation bar is showing in the top of every web page allow users to navigate to the respective main pages.
 Links are embedded into the data shown in the table columns movie title, rating and genre.
 
 ## Where to view
 Web application hosted on Render: https://cs551p-movie.onrender.com/
 
 ## Dependencies
-Dependencies can be viewed in requirements.txt
+Dependencies are avilable in requirements.txt
 ~~~
 behave==1.2.6
 click==8.0.4
@@ -49,7 +49,7 @@ Werkzeug==2.0.3
 zipp==3.6.0
 ~~~
 
-## Running in virtual environment
+## Running in Codio virtual environment
 ~~~
 pyenv install 3.7.9
 pyenv local 3.7.9
@@ -75,6 +75,7 @@ All BDD testing related files are placed in features folder.
 
 ## Documents
 Git log: git-log.txt
+
 Submission report: CS551P submission report 52210984.pdf
 
 ## License
