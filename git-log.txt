@@ -1,3 +1,4 @@
+* 82cd979 : update readme testing documents
 * 4a7b482 : update readme maintenance
 * b791f76 : submission report
 * 51f806e : update read me pyenv local 3.7.9
