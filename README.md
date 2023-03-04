@@ -66,6 +66,16 @@ python3 -m flask run -h 0.0.0.0
 Latest code should be pull from GitHub to for deployment in Render.
 At most two websites can be opened at once from the Render deployed link.
 The number of rows of data in movies_edit.csv can be increased when the rating.csv and genre.csv are updated respectively.
+However, the server ability on Render should also be considered when adding more data rows.
+
+## Testing
+Behave is used.
+Behavior-based development (BDD) tests with Given When Then pattern is used for testing the user stories in form of scenarios.
+All BDD testing related files are placed in features folder.
+
+## Documents
+Git log: git-log.txt
+Submission report: CS551P submission report 52210984.pdf
 
 ## License
 MIT License
